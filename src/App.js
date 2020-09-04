@@ -64,6 +64,10 @@ const App = () => {
         const responseData = signupRequest.data
         setStatus(responseData.data.status.toLowerCase())
         setMessage(responseData.message);
+        setTimeout(function () {
+          setStatus("")
+          setMessage("")
+        }, 4000)
       } catch (error) {
         console.error(error);
         alert('An error occured')
